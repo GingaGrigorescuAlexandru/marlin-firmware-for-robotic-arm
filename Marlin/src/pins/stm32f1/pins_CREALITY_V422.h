@@ -34,5 +34,6 @@
 #define I_STEP_PIN                          PB4
 #define I_DIR_PIN                           PB3
 #define I_ENABLE_PIN                        PC3
+#define I_STOP_PIN                          PA4  // 4th joint endstop
 
 #include "pins_CREALITY_V4.h"

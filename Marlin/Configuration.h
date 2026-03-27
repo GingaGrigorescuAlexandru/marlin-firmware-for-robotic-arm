@@ -1347,7 +1347,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE {100, 100, 100, 100}
+#define DEFAULT_MAX_FEEDRATE {24000, 24000, 24000, 24000}
 
 // #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1360,7 +1360,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION {500, 500, 500, 500}
+#define DEFAULT_MAX_ACCELERATION {200000, 200000, 200000, 200000}
 
 // #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1375,9 +1375,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION 500          // X, Y, Z and I acceleration for moves
-#define DEFAULT_RETRACT_ACCELERATION 500  // E acceleration for retracts (unused)
-#define DEFAULT_TRAVEL_ACCELERATION 500   // X, Y, Z and I acceleration for travel moves
+#define DEFAULT_ACCELERATION 200000        // X, Y, Z and I acceleration for moves
+#define DEFAULT_RETRACT_ACCELERATION 200000 // E acceleration for retracts (unused)
+#define DEFAULT_TRAVEL_ACCELERATION 200000  // X, Y, Z and I acceleration for travel moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1843,7 +1843,7 @@
 #define Y_ENABLE_ON LOW
 #define Z_ENABLE_ON LOW
 #define E_ENABLE_ON LOW // For all extruders
-// #define I_ENABLE_ON LOW
+#define I_ENABLE_ON LOW
 // #define J_ENABLE_ON LOW
 // #define K_ENABLE_ON LOW
 // #define U_ENABLE_ON LOW
@@ -1873,7 +1873,7 @@
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR true
 #define INVERT_Z_DIR false
-// #define INVERT_I_DIR false
+#define INVERT_I_DIR false
 // #define INVERT_J_DIR false
 // #define INVERT_K_DIR false
 // #define INVERT_U_DIR false
@@ -1940,8 +1940,8 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+#define X_BED_SIZE 180
+#define Y_BED_SIZE 180
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -2410,7 +2410,7 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M {(20 * 60), (20 * 60), (20 * 60)}
+#define HOMING_FEEDRATE_MM_M {(20 * 60), (20 * 60), (20 * 60), (20 * 60)}
 
 // Edit homing feedrates with M210 and MarlinUI menu items
 // #define EDITABLE_HOMING_FEEDRATE
