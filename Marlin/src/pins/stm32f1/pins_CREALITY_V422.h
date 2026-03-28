@@ -30,6 +30,9 @@
 
 #define EMIT_CREALITY_422_WARNING
 
+// LCD pin variant for RET6 chip
+#define RET6_12864_LCD
+
 // Map I axis (4th joint) to E0 stepper driver pins
 #define I_STEP_PIN                          PB4
 #define I_DIR_PIN                           PB3
